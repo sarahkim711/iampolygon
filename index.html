@@ -36,6 +36,7 @@
       <img id="rainbow" src="images/rainbow.jpg">
       <img id="sit" src="images/sit.jpg">
       <img id="stretch" src="images/stretch.jpg">
+      <img id="city" src="images/city.jpg">
 
       <video id="city" autoplay loop="true" src="video/city.mp4"></video>
       <video id="mountain" autoplay loop="true" src="video/mountain.mp4"></video>
@@ -57,20 +58,23 @@
       <a-asset-item id="sit-mtl" src="models/sit.mtl"></a-asset-item>
       <a-asset-item id="stretch-obj" src="models/stretch.obj"></a-asset-item>
       <a-asset-item id="stretch-mtl" src="models/stretch.mtl"></a-asset-item>
+      <a-asset-item id="city-obj" src="models/city.obj"></a-asset-item>
+      <a-asset-item id="city-mtl" src="models/city.mtl"></a-asset-item>
     </a-assets>
 
     <!-- // START MY SCHTUUFFFFFFFFFFFF  -->
     <a-entity <a-entity=""
     obj-model="obj: models/balled2.obj"
-    position="-3.5575 0.04344 -6.64634"
-    rotation="3.4285794460628463 51.491144090611954 3.4984802970688067"
-    scale="0.98892 0.98892 0.98892"
+    position="-10.29067 -1.76107 -4.54172"
+    rotation="2.437935418281653 65.70565403001254 4.461049392888589"
+    scale="0.9972 0.9972 0.9972"
   material="src: #balled2">
 </a-entity>
 
+
 <a-entity <a-entity=""
 obj-model="obj: models/head3d_2.obj"
-position="-5.96292 -0.73968 -1.71352"
+position="-7.82955 -1.16871 -28.32923"
 rotation="0.4337290509140332 65.97265236254351 -2.029416510353376"
 scale="0.57569 0.57569 0.57569"
   material="src: #head3dimg">
@@ -78,43 +82,81 @@ scale="0.57569 0.57569 0.57569"
 
 <a-entity <a-entity=""
 obj-model="obj: models/bed.obj"
-position="2.76025 2.9964 -3.73529"
-rotation="52.31333852662468 -86.83289976766652 0.8090164067247224"
-scale="3.48392 3.48392 3.48392"
+position="5.75898 0.08999 -7.49202"
+rotation="77.07772034776912 -90.00021045914971 0.8090164067247224"
+scale="3.83534 3.83534 3.83534"
 material="src: #bed">
 </a-entity>
 
+
 <a-entity <a-entity=""
 obj-model="obj: models/headstand.obj"
-position="5.25661 3.43921 5.86409"
-rotation="2.5679968377763496 51.582817337832886 0.13063437728982769"
-scale="2.33691 2.33691 2.33691"
+position="11.37561 9.14511 0.0334"
+rotation="-1.3796823706750223 -109.79361044973913 0.6749442826641098"
+scale="6.43151 7.89633 6.43151"
 material="src: #headstand">
 </a-entity>
 
 <a-entity <a-entity=""
 obj-model="obj: models/rainbow.obj"
-position="2.33072 -3.93533 5.36439"
-rotation="1.3913 173.86 2.570861626752004"
-scale="3.51624 3.51624 3.51624"
+ position="-6.40634 -4.57533 7.45437"
+ rotation="0 122.84272423384364 2.570861626752004"
+ scale="3.51624 3.51624 3.51624"
 material="src: #rainbow">
 </a-entity>
 
 <a-entity <a-entity=""
 obj-model="obj: models/sit.obj"
-position="-3.56295 -3.28505 6.49965"
-rotation="24.740317593748948 70.17644370541835 -5.558263570564116"
-scale="3.51624 3.51624 3.51624"
+position="-11.29241 -6.18636 -9.25724"
+rotation="11.33032 39.13759 -5.558263570564116"
+scale="4.89589 4.89589 4.89589"
 material="src: #sit">
 </a-entity>
 
 <a-entity <a-entity=""
 obj-model="obj: models/stretch.obj"
-position="4.15575 6.37881 -3.3"
-rotation="-1.8964903018830248 61.543115648387115 -5.33251"
-scale="3.51624 3.51624 3.51624"
+position="7.31531 8.6184 -13.49873"
+rotation="-1.627773095966669 2.852756861956369 -5.420180741937588"
+scale="5.96397 5.96397 5.96397"
 material="src: #stretch">
 </a-entity>
+
+<a-entity <a-entity=""
+dynamic-body
+obj-model="obj: models/city.obj"
+position="4.15575 -9.499 14.410"
+rotation=""
+scale="3 3 3"
+material="src: #city">
+</a-entity>
+
+
+
+<!-- //camera rig -->
+  <a-entity id= "rig" movement-controls rotation= "0 0 0" position= "0 0 0">
+  <a-entity camera position= "0 1.6 0" look-controls= "pointerLockEnable:true">
+  </a-entity>
+  <a-box static-body= "shape:box; mass:0" position= "0 0 0" width = "1" height = "1" depth="1" visible= "false">
+  </a-box>
+  </a-entity>
+
+  <!-- /dynamic Box -->
+  <!-- <a-box dynamic-body = "shape:box" position = "0 6 -4" width = "1" height = "1" depth="1">
+  </a-box>
+
+
+  <!-- /static Box -->
+  <!-- <a-box static-body= "shape:box" position = "0 1.5 -5" width = "4" height = "3" depth="2" color="#3480eb">
+  </a-box>
+
+
+  <!-- /sphere -->
+  <!-- <a-sphere dynamic-body= "shape:sphere; sphereRadius:.5 mass: 0.1" position= "-.5 4 -4" scale = ".5 .5 .5" color = "#6bff6b">
+</a-sphere>
+
+  <!-- //floor position -->
+  <!-- <a-box static-body= "shape:box" position = "0 0 0" rotation = "0 0 0" width = "50" height = ".25" depth="50" color="#7bc8a4">
+  </a-box> --> --> --> -->
 
 
 <!-- // MODELS LOAD HEAD -->
