@@ -1,0 +1,188 @@
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- main a-frame library -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+  <!-- physics library -->
+  <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+  <!-- particle system library -->
+  <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+  <!-- environment library -->
+  <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+
+  <!-- text geometry library -->
+  <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+
+  <!-- extras library -->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+  <!-- efor the nav mesh -->
+  <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js"></script>
+</head>
+<body>
+  <a-scene physics>
+    <a-assets>
+      <img id="head3dimg" src="images/head3d.jpg">
+      <img id="skyTexture" src="images/cloud.jpeg">
+      <img id="io" src="images/io.jpg">
+      <img id="pluto" src="images/pluto.jpg">
+      <img id="balled2" src="images/balled.jpg">
+      <img id="bed" src="images/bed.jpg">
+      <img id="headstand" src="images/headstand.jpg">
+      <img id="rainbow" src="images/rainbow.jpg">
+      <img id="sit" src="images/sit.jpg">
+      <img id="stretch" src="images/stretch.jpg">
+
+      <video id="city" autoplay loop="true" src="video/city.mp4"></video>
+      <video id="mountain" autoplay loop="true" src="video/mountain.mp4"></video>
+      <video id="sarah360" autoplay loop="true" src="video/Sarah360.mp4"></video>
+
+      <a-asset-item id="tower-obj" src="models/model.obj"></a-asset-item>
+      <a-asset-item id="tower-mtl" src="models/materials.mtl"></a-asset-item>
+      <a-asset-item id="head3d-obj" src="models/head3d_2.obj"></a-asset-item>
+      <a-asset-item id="head3d-mtl" src="models/head3d_2.mtl"></a-asset-item>
+      <a-asset-item id="balled2-obj" src="models/balled2.obj"></a-asset-item>
+      <a-asset-item id="balled2-mtl" src="models/balled2.mtl"></a-asset-item>
+      <a-asset-item id="bed-obj" src="models/bed.obj"></a-asset-item>
+      <a-asset-item id="bed-mtl" src="models/bed.mtl"></a-asset-item>
+      <a-asset-item id="headstand-obj" src="models/headstand.obj"></a-asset-item>
+      <a-asset-item id="headstand-mtl" src="models/headstand.mtl"></a-asset-item>
+      <a-asset-item id="rainbow-obj" src="models/rainbow.obj"></a-asset-item>
+      <a-asset-item id="rainbow-mtl" src="models/rainbow.mtl"></a-asset-item>
+      <a-asset-item id="sit-obj" src="models/sit.obj"></a-asset-item>
+      <a-asset-item id="sit-mtl" src="models/sit.mtl"></a-asset-item>
+      <a-asset-item id="stretch-obj" src="models/stretch.obj"></a-asset-item>
+      <a-asset-item id="stretch-mtl" src="models/stretch.mtl"></a-asset-item>
+    </a-assets>
+
+    <!-- // START MY SCHTUUFFFFFFFFFFFF  -->
+    <a-entity <a-entity=""
+    obj-model="obj: models/balled2.obj"
+    position="-3.5575 0.04344 -6.64634"
+    rotation="3.4285794460628463 51.491144090611954 3.4984802970688067"
+    scale="0.98892 0.98892 0.98892"
+  material="src: #balled2">
+</a-entity>
+
+<a-entity <a-entity=""
+obj-model="obj: models/head3d_2.obj"
+position="-5.96292 -0.73968 -1.71352"
+rotation="0.4337290509140332 65.97265236254351 -2.029416510353376"
+scale="0.57569 0.57569 0.57569"
+  material="src: #head3dimg">
+</a-entity>
+
+<a-entity <a-entity=""
+obj-model="obj: models/bed.obj"
+position="2.76025 2.9964 -3.73529"
+rotation="52.31333852662468 -86.83289976766652 0.8090164067247224"
+scale="3.48392 3.48392 3.48392"
+material="src: #bed">
+</a-entity>
+
+<a-entity <a-entity=""
+obj-model="obj: models/headstand.obj"
+position="5.25661 3.43921 5.86409"
+rotation="2.5679968377763496 51.582817337832886 0.13063437728982769"
+scale="2.33691 2.33691 2.33691"
+material="src: #headstand">
+</a-entity>
+
+<a-entity <a-entity=""
+obj-model="obj: models/rainbow.obj"
+position="2.33072 -3.93533 5.36439"
+rotation="1.3913 173.86 2.570861626752004"
+scale="3.51624 3.51624 3.51624"
+material="src: #rainbow">
+</a-entity>
+
+<a-entity <a-entity=""
+obj-model="obj: models/sit.obj"
+position="-3.56295 -3.28505 6.49965"
+rotation="24.740317593748948 70.17644370541835 -5.558263570564116"
+scale="3.51624 3.51624 3.51624"
+material="src: #sit">
+</a-entity>
+
+<a-entity <a-entity=""
+obj-model="obj: models/stretch.obj"
+position="4.15575 6.37881 -3.3"
+rotation="-1.8964903018830248 61.543115648387115 -5.33251"
+scale="3.51624 3.51624 3.51624"
+material="src: #stretch">
+</a-entity>
+
+
+<!-- // MODELS LOAD HEAD -->
+<!-- <a-entity
+obj-model="obj: #head3d-obj; mtl:#head3d-mtl"
+position="0 0 0"
+rotation="0 0 0"
+scale="1 1 1">
+</a-entity> -->
+
+<!-- //  IDK YET -->
+
+
+<!-- <a-entity
+geometry = "primitive: box;"
+position = "-1 2 -3"
+material = "src:#pluto"
+animation="property: rotation;
+to: 360 360 0;
+dur: 5000;
+easing: linear;
+loop: true;"
+animation__pos="property:position;
+to: 1 3 -2;
+dur: 4000;
+loop: true;
+easing: linear;
+dir: alternate;"
+>
+</a-entity> -->
+<!-- // SPHERE SHAPE LOAD parent and child animation -->
+<!-- <a-entity
+position = "0 0 0"
+animation="property: rotation;
+to: 0 360 0;
+dur: 15000;
+easing: linear;
+loop: true;">
+
+<a-entity
+geometry="primitive: sphere"
+radius="1;"
+position="0 1.5 -4"
+material="src: #io"
+scale="2 2 2"
+animation="property: rotation;
+to: 0 360 0;
+dur: 5000;
+easing: linear;
+loop: true;">
+</a-entity>
+</a-entity> -->
+
+<!-- // INSERTING SMALL VIDEO -->
+<!-- <a-video src="#mountain" width="16" height="9" position="0 0 -10"></a-video>
+<!-- // TEXT LOAD -->
+<!-- <a-text>
+value="Hello!"
+color="#111"
+position="0 0.06334 1.1438"
+align="center"
+</a-text> --> -->
+
+
+<!-- // BACKGROUND 360 LOAD -->
+<a-sky src="#skyTexture"></a-sky>
+<!-- <a-videosphere src="#city"></a-videosphere> -->
+
+</a-scene>
+</body>
+</html>
