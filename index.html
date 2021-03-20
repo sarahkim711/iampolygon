@@ -61,7 +61,15 @@
       <a-asset-item id="stretch-mtl" src="models/stretch.mtl"></a-asset-item>
       <a-asset-item id="city-obj" src="models/city.obj"></a-asset-item>
       <a-asset-item id="city-mtl" src="models/city.mtl"></a-asset-item>
+      <a-asset-item id="city2-obj" src="models/city2.obj"></a-asset-item>
+      <a-asset-item id="city2-mtl" src="models/city2.mtl"></a-asset-item>
+      <a-asset-item id="city3-obj" src="models/city3.obj"></a-asset-item>
+      <a-asset-item id="city3-mtl" src="models/city3.mtl"></a-asset-item>
+      <a-asset-item id="cityside-obj" src="models/cityside.obj"></a-asset-item>
+      <a-asset-item id="cityside-mtl" src="models/cityside.mtl"></a-asset-item>
+
     </a-assets>
+
 
     <!-- // START MY SCHTUUFFFFFFFFFFFF  -->
     <a-entity <a-entity=""
@@ -69,7 +77,13 @@
     position="-10.29067 -1.76107 -4.54172"
     rotation="2.437935418281653 65.70565403001254 4.461049392888589"
     scale="0.9972 0.9972 0.9972"
-  material="src: #balled2">
+  material="src: #balled2"
+  position = "0 0 0"
+  animation="property: rotation;
+  to: 0 380 0;
+  dur: 8000;
+  easing: linear;
+  loop: true;">
 </a-entity>
 
 
@@ -78,7 +92,13 @@ obj-model="obj: models/head3d_2.obj"
 position="-7.82955 -1.16871 -28.32923"
 rotation="0.4337290509140332 65.97265236254351 -2.029416510353376"
 scale="0.57569 0.57569 0.57569"
-  material="src: #head3dimg">
+  material="src: #head3dimg"
+  position = "0 0 0"
+  animation="property: rotation;
+  to: 0 360 0;
+  dur: 3000;
+  easing: linear;
+  loop: true;">
 </a-entity>
 
 <a-entity <a-entity=""
@@ -92,8 +112,8 @@ material="src: #bed">
 
 <a-entity <a-entity=""
 obj-model="obj: models/headstand.obj"
-position="11.37561 9.14511 0.0334"
-rotation="-1.3796823706750223 -109.79361044973913 0.6749442826641098"
+position="10.33561 9.27511 0.0334"
+rotation="-1.3796823706750223 -106.43361 0.6749442826641098"
 scale="6.43151 7.89633 6.43151"
 material="src: #headstand">
 </a-entity>
@@ -106,12 +126,18 @@ obj-model="obj: models/rainbow.obj"
 material="src: #rainbow">
 </a-entity>
 
-<a-entity <a-entity=""
-obj-model="obj: models/sit.obj"
-position="-11.29241 -6.18636 -9.25724"
-rotation="11.33032 39.13759 -5.558263570564116"
-scale="4.89589 4.89589 4.89589"
-material="src: #sit">
+  <a-entity <a-entity=""
+  obj-model="obj: models/sit.obj"
+  position="-11.29241 -6.18636 -9.25724"
+  rotation="11.33032 39.13759 -5.558263570564116"
+  scale="4.89589 4.89589 4.89589"
+  material="src: #sit"
+  position = "-11.29241 -6.18636 -9.25724"
+  animation="property: rotation;
+  to: 0 360 0;
+  dur: 15000;
+  easing: linear;
+  loop: true;">
 </a-entity>
 
 <a-entity <a-entity=""
@@ -122,14 +148,44 @@ scale="5.96397 5.96397 5.96397"
 material="src: #stretch">
 </a-entity>
 
-<a-entity <a-entity=""
+<!-- <a-entity <a-entity=""
 dynamic-body
 obj-model="obj: models/city.obj"
 position="4.15575 -9.499 14.410"
 rotation=""
 scale="3 3 3"
 material="src: #city">
+</a-entity> -->
+
+<!-- <a-entity <a-entity=""
+dynamic-body
+obj-model="obj: models/city2.obj"
+position="4.15575 -13.769 14.41"
+rotation=""
+scale="3 3 3"
+material="src: #city">
+</a-entity> -->
+
+<a-entity <a-entity=""
+dynamic-body
+obj-model="obj: models/city3.obj"
+position="4.15575 -3.112 14.41"
+rotation=""
+scale="3 3 3"
+material="src: #city">
 </a-entity>
+
+<a-entity <a-entity=""
+dynamic-body
+obj-model="obj: models/cityside.obj"
+position="4.15575 -3.112 14.41"
+rotation=""
+scale="3 3 3"
+material="src: #city">
+</a-entity>
+
+
+
 
 
 
@@ -200,7 +256,7 @@ loop: true;">
 <a-entity
 geometry="primitive: sphere"
 radius="1;"
-position="0 1.5 -4"
+position="0 1.5 -w4"
 material="src: #io"
 scale="2 2 2"
 animation="property: rotation;
@@ -223,7 +279,7 @@ align="center"
 
 
 <!-- // BACKGROUND 360 LOAD -->
-<a-sky src="#360"></a-sky>
+<a-sky color="#ffffff" material="color: #000000" geometry=""></a-sky>
 <!-- <a-videosphere src="#city"></a-videosphere> -->
 
 </a-scene>
