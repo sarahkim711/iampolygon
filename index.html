@@ -42,7 +42,8 @@
 
       <video id="cityvid" autoplay loop="true" src="video/city.mp4"></video>
       <video id="mountain" autoplay loop="true" src="video/mountain.mp4"></video>
-      <video id="pixel" autoplay loop="true" src="video/pixel.mp4"></video>
+      <video id="pixel" autoplay loop="true" src="video/pixel.mov"></video>
+      <video id="pixel2" autoplay loop="true" src="video/pixel2.mov"></video>
 
       <a-asset-item id="tower-obj" src="models/model.obj"></a-asset-item>
       <a-asset-item id="tower-mtl" src="models/materials.mtl"></a-asset-item>
@@ -224,7 +225,11 @@ dir: alternate">
 <!-- //------------------------camera rig -->
   <a-entity id= "rig" movement-controls rotation= "0 0 0" position= "0 0 0">
       <a-entity camera position= "0 1.6 0" look-controls= "pointerLockEnable:true">
-        <a-entity <a-entity="" text-geometry="value: hello can you hear me?; weight: bold" material="color: #f0e02e" position="-3.87956 -3.388 -4.37223" rotation="" scale="">
+        <a-entity <a-entity="" text-geometry="value: hello can you hear me?; weight: bold"
+        material="color: #f0e02e"
+        position="-3.87956 -3.388 -4.37223"
+        rotation=""
+        scale="">
         </a-entity>
         </a-entity>
       </a-entity>
@@ -303,7 +308,8 @@ loop: true;">
 </a-entity> -->
 
 <!-- // INSERTING SMALL VIDEO -->
-<a-video src="#pixel" width="9" height="16" position="0 0 -10"></a-video>
+<a-video src="#pixel" width="15" height="21" position="0 24.38261 -3.51925" rotation="85 0 0" material="" geometry=""></a-video>
+<!-- <a-video src="#pixel2" width="9" height="20" position="0 0 -10"></a-video> -->
 <!-- // TEXT LOAD -->
 <!-- <a-text>
 value="Hello!"
